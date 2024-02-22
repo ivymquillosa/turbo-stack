@@ -1,0 +1,5 @@
+{
+  "extends": "@stack/config-typescript/react-app.json",
+  "include": [".", ".storybook/preview.ts"],
+  "exclude": ["dist", "build", "node_modules"]
+}
