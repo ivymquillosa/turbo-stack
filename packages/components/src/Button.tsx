@@ -1,7 +1,13 @@
-import { FC, RefAttributes, forwardRef } from 'react'
+import {
+  ComponentPropsWithoutRef,
+  ElementRef,
+  FC,
+  RefAttributes,
+  forwardRef
+} from 'react'
 import { commonTypes } from './types'
 import { cm } from '@stack/classnames'
-import { Spinner } from '.'
+import { Button as RAButton, ButtonProps } from 'react-aria-components'
 
 const btnStyles = {
   base: 'flex gap-2 items-center justify-center',
@@ -19,28 +25,44 @@ const btnStyles = {
       active: 'bg-transparent hover:bg-active-50 text-active-500'
     },
     solid: {
-      primary: 'bg-primary-500 hover:bg-primary-600 text-light-500 border-light-500 border-0',
-      secondary: 'bg-secondary-500 hover:bg-secondary-600 text-light-500 border-light-500 border-0',
-      light: 'bg-light-500 hover:bg-light-600 text-dark-500 border-dark-500 border-0',
+      primary:
+        'bg-primary-500 hover:bg-primary-600 text-light-500 border-light-500 border-0',
+      secondary:
+        'bg-secondary-500 hover:bg-secondary-600 text-light-500 border-light-500 border-0',
+      light:
+        'bg-light-500 hover:bg-light-600 text-dark-500 border-dark-500 border-0',
       dark: 'bg-dark-500 hover:bg-dark-600 text-light-500 border-light-500 border-0',
-      default: 'bg-default-500 hover:bg-default-600 text-light-500 border-light-500 border-0',
-      success: 'bg-success-500 hover:bg-success-600 text-light-500 border-light-500 border-0',
-      warning: 'bg-warning-500 hover:bg-warning-600 text-dark-500 border-dark-500 border-0',
-      danger: 'bg-danger-500 hover:bg-danger-600 text-light-500 border-light-500 border-0',
+      default:
+        'bg-default-500 hover:bg-default-600 text-light-500 border-light-500 border-0',
+      success:
+        'bg-success-500 hover:bg-success-600 text-light-500 border-light-500 border-0',
+      warning:
+        'bg-warning-500 hover:bg-warning-600 text-dark-500 border-dark-500 border-0',
+      danger:
+        'bg-danger-500 hover:bg-danger-600 text-light-500 border-light-500 border-0',
       info: 'bg-info-500 hover:bg-info-600 text-light-500 border-light-500 border-0',
-      active: 'bg-active-500 hover:bg-active-600 text-light-500 border-light-500 border-0'
+      active:
+        'bg-active-500 hover:bg-active-600 text-light-500 border-light-500 border-0'
     },
     outlined: {
-      primary: 'bg-transparent border text-primary-500 border-primary-500 hover:text-primary-600 hover:border-primary-600 hover:bg-primary-50',
-      secondary: 'bg-transparent border text-secondary-500 border-secondary-500 hover:text-secondary-600 hover:border-secondary-600 hover:bg-secondary-50',
-      light: 'bg-transparent border text-light-500 border-light-500 hover:text-light-600 hover:border-light-600',
+      primary:
+        'bg-transparent border text-primary-500 border-primary-500 hover:text-primary-600 hover:border-primary-600 hover:bg-primary-50',
+      secondary:
+        'bg-transparent border text-secondary-500 border-secondary-500 hover:text-secondary-600 hover:border-secondary-600 hover:bg-secondary-50',
+      light:
+        'bg-transparent border text-light-500 border-light-500 hover:text-light-600 hover:border-light-600',
       dark: 'bg-transparent border text-dark-500 border-dark-500 hover:text-dark-600 hover:border-dark-600 hover:bg-dark-50',
-      default: 'bg-transparent border text-default-500 border-default-500 hover:text-default-600 hover:border-default-600 hover:bg-default-50',
-      success: 'bg-transparent border text-success-500 border-success-500 hover:text-success-600 hover:border-success-600 hover:bg-success-50',
-      warning: 'bg-transparent border text-warning-500 border-warning-500 hover:text-warning-600 hover:border-warning-600 hover:bg-warning-50',
-      danger: 'bg-transparent border text-danger-500 border-danger-500 hover:text-danger-600 hover:border-danger-600 hover:bg-danger-50',
+      default:
+        'bg-transparent border text-default-500 border-default-500 hover:text-default-600 hover:border-default-600 hover:bg-default-50',
+      success:
+        'bg-transparent border text-success-500 border-success-500 hover:text-success-600 hover:border-success-600 hover:bg-success-50',
+      warning:
+        'bg-transparent border text-warning-500 border-warning-500 hover:text-warning-600 hover:border-warning-600 hover:bg-warning-50',
+      danger:
+        'bg-transparent border text-danger-500 border-danger-500 hover:text-danger-600 hover:border-danger-600 hover:bg-danger-50',
       info: 'bg-transparent border text-info-500 border-info-500 hover:text-info-600 hover:border-info-600 hover:bg-info-50',
-      active: 'bg-transparent border text-active-500 border-active-500 hover:text-active-600 hover:border-active-600 hover:bg-active-50'
+      active:
+        'bg-transparent border text-active-500 border-active-500 hover:text-active-600 hover:border-active-600 hover:bg-active-50'
     },
     soft: {
       primary: 'bg-primary-100 hover:bg-primary-200 text-primary-500',
@@ -53,12 +75,12 @@ const btnStyles = {
       danger: 'bg-danger-100 hover:bg-danger-200 text-danger-500',
       info: 'bg-info-100 hover:bg-info-200 text-info-500',
       active: 'bg-active-100 hover:bg-active-200 text-active-500'
-    },
+    }
   },
   radius: {
     none: 'rounded-none',
     soft: 'rounded',
-    round: 'rounded-full' 
+    round: 'rounded-full'
   },
   size: {
     sm: 'text-sm/8 px-4',
@@ -70,7 +92,7 @@ const btnStyles = {
   block: 'w-full'
 }
 
-export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface IButtonProps {
   color?: commonTypes['color']
   variant?: commonTypes['variant']
   size?: commonTypes['size']
@@ -78,47 +100,43 @@ export interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
   loading?: boolean
   scaleUp?: boolean
   block?: boolean
+  // children?: React.ReactNode
 }
 
-const Button: FC<IButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef(
-  (props, ref)=> {
-    const {
-      color='primary',
-      className,
-      type='button',
-      size='base',
-      variant='solid',
-      radius='none',
-      scaleUp= false,
-      block= false,
-      loading= false,
-      children,
-      ...rest
-    } = props
-    
-    const btnClass = cm(
-      btnStyles.base,
-      scaleUp ? btnStyles.transition : '',
-      block ? btnStyles.block : 'w-min',
-      btnStyles.radius[radius],
-      btnStyles.variant[variant][color],
-      btnStyles.size[size],
-      className
-    )
+const Button = forwardRef<
+  ElementRef<typeof RAButton>,
+  ComponentPropsWithoutRef<typeof RAButton> & IButtonProps
+>(function ReactAriaButton(props, ref) {
+  const {
+    color = 'primary',
+    className,
+    type = 'button',
+    size = 'base',
+    variant = 'solid',
+    radius = 'none',
+    scaleUp = false,
+    block = false,
+    loading = false,
+    ...rest
+  } = props
 
-    return (
-      <button
-        ref={ref}
-        className={btnClass}
-        type={type}
-        {...rest}
-      >
-        {loading && <Spinner size={size === 'sm' ? size : 'base'} color={variant === 'solid' ? 'inherit' : color}/>} {children}
-      </button>
-    )
-  }
-)
+  const btnClass = cm(
+    btnStyles.base,
+    scaleUp ? btnStyles.transition : '',
+    block ? btnStyles.block : 'w-min',
+    btnStyles.radius[radius],
+    btnStyles.variant[variant][color],
+    btnStyles.size[size],
+    className
+  )
 
-Button.displayName='Button'
+  return (
+    <RAButton ref={ref} className={btnClass} type={type} {...rest}>
+      {props.children}
+    </RAButton>
+  )
+})
+
+Button.displayName = 'Button'
 
 export default Button

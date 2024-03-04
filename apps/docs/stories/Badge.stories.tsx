@@ -1,25 +1,24 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Badge } from '@stack/component';
+import type { Meta, StoryObj } from '@storybook/react'
+import { Badge } from '@stack/component'
 
 const meta = {
   title: 'Components/Badge',
   component: Badge,
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: {
-  },
-} satisfies Meta<typeof Badge>;
+  argTypes: {}
+} satisfies Meta<typeof Badge>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    label:'Badge',
+    label: 'Badge',
     color: 'primary',
-    size:'base',
-    className:'test'
-  },
-};
+    size: 'base',
+    className: 'test'
+  }
+}

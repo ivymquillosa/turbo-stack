@@ -1,29 +1,10 @@
-import React from 'react'
-import { cm } from '@stack/classnames'
-import { cva, type VariantProps } from 'class-variance-authority'
+import { FC, RefAttributes, forwardRef } from 'react'
 import { commonTypes } from './types'
+import { cm } from '@stack/classnames'
+import { Spinner } from '.'
 
-const badgeVariants = cva('flex items-center justify-center', {
-  variants: {
-    size: {
-      sm: 'px-3 text-xs/5',
-      base: 'px-3 text-sm/6',
-      lg: 'px-4 text-sm/7',
-      xl: 'px-5 text-base/8'
-    },
-    radius: {
-      none: 'rounded-none',
-      soft: 'rounded',
-      round: 'rounded-full'
-    }
-  },
-  defaultVariants: {
-    size: 'base',
-    radius: 'round'
-  }
-})
-
-const badgeStyles = {
+const btnStyles = {
+  base: 'flex gap-2 items-center justify-center',
   variant: {
     flat: {
       primary: 'bg-transparent hover:bg-primary-50 text-primary-500',
@@ -89,44 +70,73 @@ const badgeStyles = {
       info: 'bg-info-100 hover:bg-info-200 text-info-500',
       active: 'bg-active-100 hover:bg-active-200 text-active-500'
     }
-  }
+  },
+  radius: {
+    none: 'rounded-none',
+    soft: 'rounded',
+    round: 'rounded-full'
+  },
+  size: {
+    sm: 'text-sm/8 px-4',
+    base: 'text-base/9 px-5',
+    lg: 'text-base/9 px-5 font-semibold',
+    xl: 'text-base/10 px-6 font-semibold'
+  },
+  transition: 'hover:scale-105 transition-all duration-200',
+  block: 'w-full'
 }
 
-export interface IBadgeProps extends VariantProps<typeof badgeVariants> {
-  className?: string
-  variant?: commonTypes['variant']
+export interface IButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: commonTypes['color']
-  label?: string
-  children?: React.HTMLAttributes<HTMLDivElement>['children']
+  variant?: commonTypes['variant']
+  size?: commonTypes['size']
+  radius?: commonTypes['radius']
+  loading?: boolean
+  scaleUp?: boolean
+  block?: boolean
 }
 
-const Badge = React.forwardRef<HTMLDivElement, IBadgeProps>(
-  (
-    {
-      variant = 'soft',
+const Button: FC<IButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef(
+  (props, ref) => {
+    const {
       color = 'primary',
-      size,
-      radius,
       className,
-      label,
-      children
-    },
-    ref
-  ) => {
+      type = 'button',
+      size = 'base',
+      variant = 'solid',
+      radius = 'none',
+      scaleUp = false,
+      block = false,
+      loading = false,
+      children,
+      ...rest
+    } = props
+
+    const btnClass = cm(
+      btnStyles.base,
+      scaleUp ? btnStyles.transition : '',
+      block ? btnStyles.block : 'w-min',
+      btnStyles.radius[radius],
+      btnStyles.variant[variant][color],
+      btnStyles.size[size],
+      className
+    )
+
     return (
-      <div
-        ref={ref}
-        className={cm(
-          badgeStyles.variant[variant][color],
-          badgeVariants({ size, radius, className })
-        )}
-      >
-        {children || label}
-      </div>
+      <button ref={ref} className={btnClass} type={type} {...rest}>
+        {loading && (
+          <Spinner
+            size={size === 'sm' ? size : 'base'}
+            color={variant === 'solid' ? 'inherit' : color}
+          />
+        )}{' '}
+        {children}
+      </button>
     )
   }
 )
 
-Badge.displayName = 'Badge'
+Button.displayName = 'Button'
 
-export default Badge
+export default Button

@@ -1,19 +1,18 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@stack/component';
+import { Button } from '@stack/component'
+import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
   title: 'Components/Button',
   component: Button,
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: {
-  },
-} satisfies Meta<typeof Button>;
+  argTypes: {}
+} satisfies Meta<typeof Button>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
@@ -23,6 +22,8 @@ export const Primary: Story = {
     radius: 'round',
     block: false,
     loading: true,
-    onClick:()=>{alert('hi button')},
-  },
-};
+    onPress: () => {
+      alert('hi button')
+    }
+  }
+}
