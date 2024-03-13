@@ -1,13 +1,11 @@
 import {
   ComponentPropsWithoutRef,
   ElementRef,
-  FC,
-  RefAttributes,
   forwardRef
 } from 'react'
 import { commonTypes } from './types'
 import { cm } from '@stack/classnames'
-import { Button as RAButton, ButtonProps } from 'react-aria-components'
+import { Button as RAButton } from 'react-aria-components'
 
 const btnStyles = {
   base: 'flex gap-2 items-center justify-center',
