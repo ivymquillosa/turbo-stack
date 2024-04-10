@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Popover, Dialog, Button } from '@stack/component'
+import { Popover, Dialog, Button } from '@stack/aria-components'
 
 const meta = {
-  title: 'Components/Popover',
+  title: 'React Aria/Popover',
   component: Popover.Content,
   parameters: {
     layout: 'centered'

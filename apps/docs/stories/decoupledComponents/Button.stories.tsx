@@ -1,8 +1,8 @@
-import { Button } from '@stack/component'
+import { Button } from '@stack/decoupled-components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'Components/Button',
+  title: 'Decoupled/Button',
   component: Button,
   parameters: {
     layout: 'centered'
@@ -22,7 +22,7 @@ export const Primary: Story = {
     radius: 'round',
     block: false,
     loading: true,
-    onPress: () => {
+    onClick: () => {
       alert('hi button')
     }
   }

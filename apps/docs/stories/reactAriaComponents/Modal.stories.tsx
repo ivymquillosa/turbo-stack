@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Dialog, Modal, Button } from '@stack/component'
+import { Modal, Dialog, Button } from '@stack/aria-components'
 
 const meta = {
-  title: 'Components/Dialog',
-  component: Dialog.Trigger,
+  title: 'React Aria/Modal',
+  component: Modal.Overlay,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {}
-} satisfies Meta<typeof Dialog.Trigger>
+} satisfies Meta<typeof Modal.Overlay>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -18,10 +18,10 @@ export const Primary: Story = {
   render: args => (
     <div>
       <Dialog.Trigger {...args}>
-        <Button>Dialog</Button>
+        <Button>Modal</Button>
         <Modal.Overlay>
           <Modal.Content>
-          <Dialog.Content
+            <Dialog.Content
               role="alertdialog"
               className="relative outline-none"
             >
@@ -56,5 +56,5 @@ export const Primary: Story = {
       </Dialog.Trigger>
     </div>
   )
-  
+  // args: {...}
 }

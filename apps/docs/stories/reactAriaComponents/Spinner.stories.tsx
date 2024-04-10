@@ -1,25 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Select } from '@stack/component'
+import { Spinner } from '@stack/aria-components'
 
 const meta = {
-  title: 'Components/Select',
-  component: Select,
+  title: 'React Aria/Spinner',
+  component: Spinner,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {}
-} satisfies Meta<typeof Select>
+} satisfies Meta<typeof Spinner>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    // children: 'Select',
-    // color: 'primary',
-    // radius: 'round',
-    // block: false,
-    // variant: 'solid',
+    color: 'primary',
+    size: 'base',
+    className: 'test'
   }
 }

@@ -1,8 +1,8 @@
-import { ToggleButton } from '@stack/component'
+import { ToggleButton } from '@stack/aria-components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'Components/ToggleButton',
+  title: 'React Aria/ToggleButton',
   component: ToggleButton,
   parameters: {
     layout: 'centered'

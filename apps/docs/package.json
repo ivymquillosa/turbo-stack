@@ -11,7 +11,9 @@
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },
   "dependencies": {
-    "@stack/component": "workspace:*",
+    "@stack/aria-components": "workspace:*",
+    "@stack/decoupled-components": "workspace:*",
+    "@stack/awesome-components": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

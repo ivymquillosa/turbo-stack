@@ -1,23 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Avatar } from '@stack/component'
+import { Badge } from '@stack/aria-components'
 
 const meta = {
-  title: 'Components/Avatar',
-  component: Avatar,
+  title: 'React Aria/Badge',
+  component: Badge,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {}
-} satisfies Meta<typeof Avatar>
+} satisfies Meta<typeof Badge>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Primary: Story = {
   args: {
-    name: 'Avatar',
-    src: 'https://avatars.githubusercontent.com/u/72949747?v=4',
+    label: 'Badge',
     color: 'primary',
     size: 'base',
     className: 'test'

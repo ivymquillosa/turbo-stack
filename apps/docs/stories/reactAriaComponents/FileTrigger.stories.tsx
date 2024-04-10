@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Button, FileTrigger } from '@stack/component'
+import { Button, FileTrigger } from '@stack/aria-components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'Components/FileTrigger',
+  title: 'React Aria/FileTrigger',
   component: FileTrigger,
   parameters: {
     layout: 'centered'

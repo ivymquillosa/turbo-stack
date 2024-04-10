@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Spinner } from '@stack/component'
+import { Checkbox } from '@stack/aria-components'
 
 const meta = {
-  title: 'Components/Spinner',
-  component: Spinner,
+  title: 'React Aria/Checkbox',
+  component: Checkbox,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {}
-} satisfies Meta<typeof Spinner>
+} satisfies Meta<typeof Checkbox>
 
 export default meta
 type Story = StoryObj<typeof meta>
@@ -18,6 +18,8 @@ export const Primary: Story = {
   args: {
     color: 'primary',
     size: 'base',
-    className: 'test'
+    children: 'Hello Checkbox',
+    className: 'test',
+    defaultSelected: true
   }
 }

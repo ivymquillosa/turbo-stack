@@ -1,5 +1,5 @@
 {
-  "name": "@stack/component",
+  "name": "@stack/awesome-components",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -30,6 +30,8 @@
     "access": "public"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.15.3",
+    "@tanstack/react-virtual": "^3.2.0",
     "class-variance-authority": "^0.7.0",
     "react-aria-components": "^1.1.1",
     "react-icons": "^5.0.1"
