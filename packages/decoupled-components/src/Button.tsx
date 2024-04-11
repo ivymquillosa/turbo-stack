@@ -130,7 +130,7 @@ const Button: FC<IButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef(
             size={size === 'sm' ? size : 'base'}
             color={variant === 'solid' ? 'inherit' : color}
           />
-        )}{' '}
+        )}
         {children}
       </button>
     )
