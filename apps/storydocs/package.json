@@ -13,7 +13,7 @@
   "dependencies": {
     "@stack/aria-components": "workspace:*",
     "@stack/decoupled-components": "workspace:*",
-    "@stack/awesome-components": "workspace:*",
+    "@stack/radix-components": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

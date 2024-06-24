@@ -3,9 +3,10 @@
   "singleQuote": true,
   "arrowParens": "avoid",
   "trailingComma": "none",
+  "editor.formatOnSave": true,
   "tabWidth": 2,
   "printWidth": 80,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindConfig": "./apps/docs/tailwind.config.ts",
+  "tailwindConfig": "./apps/storydocs/tailwind.config.ts",
   "tailwindFunctions": ["cva", "cm"]
 }

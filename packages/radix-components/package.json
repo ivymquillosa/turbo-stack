@@ -1,5 +1,5 @@
 {
-  "name": "@stack/awesome-components",
+  "name": "@stack/radix-components",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,9 +10,9 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
-    "lint": "eslint . --max-warnings 0",
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
+    "lint": "eslint /src",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
@@ -30,10 +30,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@tanstack/react-table": "^8.15.3",
-    "@tanstack/react-virtual": "^3.2.0",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
-    "react-aria-components": "^1.1.1",
+    "lucide-react": "^0.368.0",
     "react-icons": "^5.0.1"
   }
 }
