@@ -8,19 +8,21 @@ const Content = forwardRef<
   ComponentPropsWithoutRef<typeof Popover>
 >((props, ref) => {
   return (
-    <Popover ref={ref} {...props}
+    <Popover
+      ref={ref}
+      {...props}
       className={({ isEntering, isExiting }) => `
-        w-[280px] placement-bottom:mt-2 placement-top:mb-2 group rounded-lg drop-shadow-lg ring-1 ring-black/10 bg-white
+        group w-[280px] rounded-lg bg-white ring-1 ring-black/10 drop-shadow-lg placement-top:mb-2 placement-bottom:mt-2
         ${
-        isEntering
-          ? 'animate-in fade-in placement-bottom:slide-in-from-top-1 placement-top:slide-in-from-bottom-1 ease-out duration-200'
-          : ''
-      }
+          isEntering
+            ? 'duration-200 ease-out animate-in fade-in placement-top:slide-in-from-bottom-1 placement-bottom:slide-in-from-top-1'
+            : ''
+        }
         ${
-        isExiting
-          ? 'animate-out fade-out placement-bottom:slide-out-to-top-1 placement-top:slide-out-to-bottom-1 ease-in duration-150'
-          : ''
-      }
+          isExiting
+            ? 'duration-150 ease-in animate-out fade-out placement-top:slide-out-to-bottom-1 placement-bottom:slide-out-to-top-1'
+            : ''
+        }
     `}
     >
       <>
@@ -35,7 +37,5 @@ const Content = forwardRef<
   )
 })
 Content.displayName = Content.displayName
-
-
 
 export { Content }

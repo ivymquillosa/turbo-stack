@@ -23,8 +23,7 @@ const avatarVariants = cva(
         sm: 'h-[34px] w-[34px] text-sm/8',
         base: 'h-9 w-9 text-base/9',
         lg: 'h-[38px] w-[38px] text-base/9 font-semibold',
-        xl: 'h-10 w-10 text-base/10 font-semibold',
-        medyoDako: 'h-[42px] w-[42px] text-base/9 font-semibold'
+        xl: 'h-10 w-10 text-base/10 font-semibold'
       },
       radius: {
         none: 'rounded-none',
@@ -67,7 +66,7 @@ const Avatar = React.forwardRef<HTMLDivElement, IAvatarProps>(
       >
         {src ? (
           <img
-            className={cm(avatarVariants({ radius }))}
+            className={cm(avatarVariants({ radius, size }))}
             src={src}
             alt={name}
           />

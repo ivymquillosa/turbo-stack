@@ -15,28 +15,26 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-const FileTriggerExample = (args:Partial<typeof FileTrigger>) => {
-    const [file, setFile] = useState(null)
+const FileTriggerExample = (args: Partial<typeof FileTrigger>) => {
+  const [file, setFile] = useState(null)
 
-    return (
-        <>
-        <FileTrigger
-            {...args}   
-            onSelect={(e) => {
-            let files = Array.from(e);
-            let filenames = files.map((file) => file.name);
-            setFile(filenames);
-            }}>
-            <Button>Select a file</Button>
-        </FileTrigger>
-        {file && file}
-        </>
-    )
+  return (
+    <>
+      <FileTrigger
+        {...args}
+        onSelect={e => {
+          let files = Array.from(e)
+          let filenames = files.map(file => file.name)
+          setFile(filenames)
+        }}
+      >
+        <Button>Select a file</Button>
+      </FileTrigger>
+      {file && file}
+    </>
+  )
 }
 
-export const Primary: Story = {
-  render: args => (
-    <FileTriggerExample {...args}/>
-  )
-  
+export const Default: Story = {
+  render: args => <FileTriggerExample {...args} />
 }

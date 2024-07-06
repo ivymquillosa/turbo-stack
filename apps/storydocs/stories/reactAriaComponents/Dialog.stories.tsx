@@ -14,14 +14,14 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Default: Story = {
   render: args => (
     <div>
       <Dialog.Trigger {...args}>
         <Button>Dialog</Button>
         <Modal.Overlay>
           <Modal.Content>
-          <Dialog.Content
+            <Dialog.Content
               role="alertdialog"
               className="relative outline-none"
             >
@@ -56,5 +56,4 @@ export const Primary: Story = {
       </Dialog.Trigger>
     </div>
   )
-  
 }

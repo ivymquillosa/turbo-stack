@@ -1,8 +1,7 @@
-import { ElementRef, forwardRef } from 'react'
-import { CheckboxProps, Checkbox as RACheckbox } from 'react-aria-components'
+import { HtmlHTMLAttributes, forwardRef } from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cm } from '@stack/classnames'
-import { LuCheck } from 'react-icons/lu'
+import { commonTypes } from './types'
 
 const checkboxVariants = cva('flex items-center justify-center gap-2', {
   variants: {
@@ -37,8 +36,14 @@ const checkboxVariants = cva('flex items-center justify-center gap-2', {
       base: 'h-4 w-4 text-base/9',
       lg: 'h-5 w-5 text-lg/9',
       xl: 'h-6 w-6 text-xl/9'
+    },
+    radius: {
+      none: 'rounded-none',
+      soft: 'rounded',
+      round: ''
     }
   },
+
   defaultVariants: {
     color: null,
     boxColor: null,
@@ -47,33 +52,40 @@ const checkboxVariants = cva('flex items-center justify-center gap-2', {
 })
 
 export interface ICheckboxProps
-  extends Omit<CheckboxProps, 'children'>,
-    Omit<VariantProps<typeof checkboxVariants>, 'boxColor'> {
-  children?: CheckboxProps['children']
+  extends Omit<HtmlHTMLAttributes<HTMLInputElement>, 'className'> {
+  color?: commonTypes['color']
+  size?: commonTypes['size']
+  radius?: commonTypes['radius']
+  label?: string
+  className?: string
 }
 
-const Checkbox = forwardRef<ElementRef<typeof RACheckbox>, ICheckboxProps>(
+const Checkbox = forwardRef<HTMLInputElement, ICheckboxProps>(
   (
-    { color = 'primary', size = 'base', className, children, ...props },
+    {
+      color = 'primary',
+      size = 'base',
+      radius = 'soft',
+      label,
+      className,
+      ...props
+    },
     ref
   ) => {
     return (
-      <RACheckbox
-        ref={ref}
-        className={cm(checkboxVariants({ color, size, className }), 'w-fit')}
-        {...props}
-      >
-        {({ isSelected }) => {
-          return (
-            <>
-              <div className={cm(checkboxVariants({ boxColor: color, size }))}>
-                {isSelected && <LuCheck />}
-              </div>
-              {children}
-            </>
-          )
-        }}
-      </RACheckbox>
+      <label className={cm(checkboxVariants({ color, size }), 'w-fit')}>
+        <div
+          className={cm(checkboxVariants({ boxColor: color, radius, size }))}
+        >
+          <input
+            ref={ref}
+            className={cm(checkboxVariants({ color, size }))}
+            type="checkbox"
+            {...props}
+          />
+        </div>
+        {label}
+      </label>
     )
   }
 )

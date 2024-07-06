@@ -9,8 +9,10 @@ const Overlay = forwardRef<
   ComponentPropsWithoutRef<typeof ModalOverlay>
 >((props, ref) => {
   return (
-    <ModalOverlay ref={ref} {...props}
-        className={({ isEntering, isExiting }) => `
+    <ModalOverlay
+      ref={ref}
+      {...props}
+      className={({ isEntering, isExiting }) => `
             fixed inset-0 z-10 flex min-h-full items-center justify-center overflow-y-auto bg-black/25 p-4 text-center backdrop-blur
             ${isEntering ? 'duration-300 ease-out animate-in fade-in' : ''}
             ${isExiting ? 'duration-200 ease-in animate-out fade-out' : ''}
@@ -27,8 +29,10 @@ const Content = forwardRef<
   ComponentPropsWithoutRef<typeof Modal>
 >((props, ref) => {
   return (
-    <Modal ref={ref} {...props}    
-        className={({ isEntering, isExiting }) => `
+    <Modal
+      ref={ref}
+      {...props}
+      className={({ isEntering, isExiting }) => `
             w-full max-w-md overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl
             ${isEntering ? 'duration-300 ease-out animate-in zoom-in-95' : ''}
             ${isExiting ? 'duration-200 ease-in animate-out zoom-out-95' : ''}

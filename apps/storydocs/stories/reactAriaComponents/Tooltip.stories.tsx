@@ -14,12 +14,14 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Default: Story = {
   render: args => (
     <Tooltip.Trigger {...args}>
       <Button>Tooltip</Button>
-      <Tooltip.Content placement='bottom'><div className='bg-primary-50'>Hello tooltip</div></Tooltip.Content>
+      <Tooltip.Content placement="bottom">
+        <div className="bg-primary-50">Hello tooltip</div>
+      </Tooltip.Content>
     </Tooltip.Trigger>
-  ),
+  )
   // args:{}
 }

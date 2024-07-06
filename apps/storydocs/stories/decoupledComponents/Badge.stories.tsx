@@ -1,25 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Checkbox } from '@stack/aria-components'
+import { Badge } from '@stack/decoupled-components'
+import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'React Aria/Checkbox',
-  component: Checkbox,
+  title: 'Decoupled/Badge',
+  component: Badge,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: {}
-} satisfies Meta<typeof Checkbox>
+  argTypes: { ...CommonMeta.argsType }
+} satisfies Meta<typeof Badge>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
+    label: 'Badge',
     color: 'primary',
     size: 'base',
-    children: 'Hello Checkbox',
-    className: 'test',
-    defaultSelected: true
+    className: 'test'
   }
 }

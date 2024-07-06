@@ -1,30 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Avatar } from '@stack/aria-components'
+import { Image } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'React Aria/Avatar',
-  component: Avatar,
+  title: 'Decoupled/Image',
+  component: Image,
   parameters: {
-    layout: 'centered',
-    controls: { expanded: true }
+    layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: {
-    color: CommonMeta?.argsType?.color,
+    radius: CommonMeta?.argsType?.radius,
     size: CommonMeta?.argsType?.size
   }
-} satisfies Meta<typeof Avatar>
+} satisfies Meta<typeof Image>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    name: 'Avatar',
+    alt: 'Decoupled Image',
     src: 'https://avatars.githubusercontent.com/u/72949747?v=4',
-    color: 'primary',
-    size: 'base',
-    className: 'test'
+    className: 'test_image_classname'
   }
 }

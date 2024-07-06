@@ -14,13 +14,13 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const Default: Story = {
   render: args => (
     <div className="flex h-96 w-96 items-center justify-center bg-dark-200">
       <Slider {...args} />
     </div>
   ),
-  args:{
+  args: {
     orientation: 'horizontal'
   }
 }

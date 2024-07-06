@@ -1,8 +1,4 @@
-import {
-  ComponentPropsWithoutRef,
-  ElementRef,
-  forwardRef
-} from 'react'
+import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { commonTypes } from './types'
 import { cm } from '@stack/classnames'
 import { Button as RAButton } from 'react-aria-components'
