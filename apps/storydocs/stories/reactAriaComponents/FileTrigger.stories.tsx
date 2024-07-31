@@ -28,7 +28,7 @@ const FileTriggerExample = (args: Partial<typeof FileTrigger>) => {
           setFile(filenames)
         }}
       >
-        <Button>Select a file</Button>
+        <Button variant='solid' size='base'>Select a file</Button>
       </FileTrigger>
       {file && file}
     </>

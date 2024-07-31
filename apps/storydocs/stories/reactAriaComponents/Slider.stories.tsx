@@ -16,11 +16,10 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   render: args => (
-    <div className="flex h-96 w-96 items-center justify-center bg-dark-200">
+    <div className="flex h-96 w-96 items-center justify-center">
       <Slider {...args} />
     </div>
   ),
   args: {
-    orientation: 'horizontal'
   }
 }

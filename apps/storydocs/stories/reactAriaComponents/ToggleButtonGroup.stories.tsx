@@ -3,20 +3,23 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'React Aria Components/ToggleButton',
+  title: 'React Aria Components/ToggleButtonGroup',
   component: ToggleButton,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: { ...CommonMeta.argsType }
 } satisfies Meta<typeof ToggleButton>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
-  args: {
-    children: 'B'
-  }
+render: args => (
+  <div className='flex gap-2'>
+    <ToggleButton>B</ToggleButton>
+    <ToggleButton>I</ToggleButton>
+    <ToggleButton>U</ToggleButton>
+  </div>
+)
 }

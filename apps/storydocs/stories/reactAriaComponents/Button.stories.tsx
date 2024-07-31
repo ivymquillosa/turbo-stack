@@ -1,5 +1,6 @@
 import { Button } from '@stack/aria-components'
 import type { Meta, StoryObj } from '@storybook/react'
+import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
   title: 'React Aria Components/Button',
@@ -8,7 +9,7 @@ const meta = {
     layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: {}
+  argTypes: { ...CommonMeta.argsType }
 } satisfies Meta<typeof Button>
 
 export default meta

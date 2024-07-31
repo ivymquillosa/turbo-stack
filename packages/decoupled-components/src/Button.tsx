@@ -116,7 +116,7 @@ const Button: FC<IButtonProps & RefAttributes<HTMLButtonElement>> = forwardRef(
     const btnClass = cm(
       btnStyles.base,
       scaleUp ? btnStyles.transition : '',
-      block ? btnStyles.block : 'w-min',
+      block ? btnStyles.block : 'w-auto',
       btnStyles.radius[radius],
       btnStyles.variant[variant][color],
       btnStyles.size[size],

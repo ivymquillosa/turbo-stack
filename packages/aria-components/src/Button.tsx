@@ -2,6 +2,7 @@ import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { commonTypes } from './types'
 import { cm } from '@stack/classnames'
 import { Button as RAButton } from 'react-aria-components'
+import Spinner from './Spinner'
 
 const btnStyles = {
   base: 'flex gap-2 items-center justify-center',
@@ -111,13 +112,14 @@ const Button = forwardRef<
     scaleUp = false,
     block = false,
     loading = false,
+    children,
     ...rest
   } = props
 
   const btnClass = cm(
     btnStyles.base,
     scaleUp ? btnStyles.transition : '',
-    block ? btnStyles.block : 'w-min',
+    block ? btnStyles.block : 'w-auto',
     btnStyles.radius[radius],
     btnStyles.variant[variant][color],
     btnStyles.size[size],
@@ -126,7 +128,13 @@ const Button = forwardRef<
 
   return (
     <RAButton ref={ref} className={btnClass} type={type} {...rest}>
-      {props.children}
+      {loading && (
+        <Spinner
+          size={size === 'sm' ? size : 'base'}
+          color={variant === 'solid' ? 'inherit' : color}
+        />
+      )}
+      {children as any}
     </RAButton>
   )
 })
