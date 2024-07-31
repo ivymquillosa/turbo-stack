@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Radio } from '@stack/decoupled-components'
+import { ProgressBar } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Radio',
-  component: Radio,
+  title: 'Decoupled Components/ProgressBar',
+  component: ProgressBar,
   parameters: {
     layout: 'centered'
   },
@@ -13,15 +13,21 @@ const meta = {
     color: CommonMeta?.argsType?.color,
     size: CommonMeta?.argsType?.size
   }
-} satisfies Meta<typeof Radio>
+} satisfies Meta<typeof ProgressBar>
 
 export default meta
 type Story = StoryObj<typeof meta>
+
 export const Default: Story = {
-  args: {
-    label: 'Radio',
-    color: 'primary',
-    size: 'base',
-    className: 'test-Radio'
-  }
+  render: args => (
+    <div className="w-96">
+      <ProgressBar
+        {...args}
+        className="test"
+        range={[10, 40]}
+        value={10}
+        showValue={true}
+      />
+    </div>
+  )
 }

@@ -36,7 +36,9 @@ const config: any = {
 
   docs: {
     autodocs: true
-  }
+  },
+
+  staticDirs: ['../public']
 }
 
 export default config

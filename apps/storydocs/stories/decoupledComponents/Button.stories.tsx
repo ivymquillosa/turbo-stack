@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Button',
+  title: 'Decoupled Components/Button',
   component: Button,
   parameters: {
     layout: 'centered'

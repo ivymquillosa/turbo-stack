@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Dialog, Modal, Button } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Dialog',
+  title: 'React Aria Components/Dialog',
   component: Dialog.Trigger,
   parameters: {
     layout: 'centered'

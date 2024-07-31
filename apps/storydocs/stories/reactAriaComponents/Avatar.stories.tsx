@@ -3,7 +3,7 @@ import { Avatar } from '@stack/aria-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'React Aria/Avatar',
+  title: 'React Aria Components/Avatar',
   component: Avatar,
   parameters: {
     layout: 'centered',

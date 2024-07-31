@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Slider } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Slider',
+  title: 'React Aria Components/Slider',
   component: Slider,
   parameters: {
     layout: 'centered'

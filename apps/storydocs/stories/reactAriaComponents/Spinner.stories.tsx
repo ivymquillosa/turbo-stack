@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Spinner } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Spinner',
+  title: 'React Aria Components/Spinner',
   component: Spinner,
   parameters: {
     layout: 'centered'

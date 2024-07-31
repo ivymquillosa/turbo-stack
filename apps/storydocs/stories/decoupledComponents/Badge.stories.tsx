@@ -3,7 +3,7 @@ import { Badge } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Badge',
+  title: 'Decoupled Components/Badge',
   component: Badge,
   parameters: {
     layout: 'centered'

@@ -3,7 +3,7 @@ import { Image } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Image',
+  title: 'Decoupled Components/Image',
   component: Image,
   parameters: {
     layout: 'centered'

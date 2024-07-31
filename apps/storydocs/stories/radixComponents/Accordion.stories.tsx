@@ -7,7 +7,7 @@ import {
 } from '@stack/radix-components'
 
 const meta: Meta<typeof Accordion> = {
-  title: 'Radix/Accordion',
+  title: 'Radix Components/Accordion',
   component: Accordion,
   tags: ['autodocs']
 }

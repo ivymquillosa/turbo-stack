@@ -2,7 +2,7 @@ import { Button } from '@stack/aria-components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'React Aria/Button',
+  title: 'React Aria Components/Button',
   component: Button,
   parameters: {
     layout: 'centered'

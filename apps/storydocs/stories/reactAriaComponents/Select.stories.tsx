@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Select } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Select',
+  title: 'React Aria Components/Select',
   component: Select,
   parameters: {
     layout: 'centered'

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Checkbox } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Checkbox',
+  title: 'React Aria Components/Checkbox',
   component: Checkbox,
   parameters: {
     layout: 'centered'

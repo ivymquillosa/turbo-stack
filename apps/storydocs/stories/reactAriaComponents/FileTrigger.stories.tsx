@@ -3,7 +3,7 @@ import { Button, FileTrigger } from '@stack/aria-components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'React Aria/FileTrigger',
+  title: 'React Aria Components/FileTrigger',
   component: FileTrigger,
   parameters: {
     layout: 'centered'

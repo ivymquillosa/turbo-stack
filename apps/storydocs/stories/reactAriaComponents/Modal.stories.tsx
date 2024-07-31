@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Modal, Dialog, Button } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Modal',
+  title: 'React Aria Components/Modal',
   component: Modal.Overlay,
   parameters: {
     layout: 'centered'

@@ -1,9 +1,9 @@
 import React from 'react'
 import { cm } from '@stack/classnames'
-import { cva } from 'class-variance-authority'
+import { cva, type VariantProps } from 'class-variance-authority'
 import { commonTypes } from './types'
 
-const inputVariants = cva('flex items-center justify-center', {
+const textareaVariants = cva('flex items-center justify-center', {
   variants: {
     size: {
       sm: 'gap-2 px-2 text-xs/5',
@@ -23,7 +23,7 @@ const inputVariants = cva('flex items-center justify-center', {
   }
 })
 
-const inputStyles = {
+const textareaStyles = {
   variant: {
     flat: {
       primary:
@@ -107,8 +107,8 @@ const inputStyles = {
   }
 }
 
-export interface IInputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
+export interface ITextareaProps
+  extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'size'> {
   variant?: commonTypes['variant']
   color?: commonTypes['color']
   size?: commonTypes['size']
@@ -117,7 +117,7 @@ export interface IInputProps
   icon?: any
 }
 
-const InputFields = React.forwardRef<HTMLDivElement, IInputProps>(
+const Textarea = React.forwardRef<HTMLDivElement, ITextareaProps>(
   (
     {
       variant = 'soft',
@@ -135,21 +135,21 @@ const InputFields = React.forwardRef<HTMLDivElement, IInputProps>(
       <div
         ref={ref}
         className={cm(
-          inputStyles.variant[variant][color],
-          inputVariants({ radius, className }),
+          textareaStyles.variant[variant][color],
+          textareaVariants({ radius, className }),
           'relative'
         )}
       >
         <span
           className={cm(
-            inputStyles.labelVariant[variant],
+            textareaStyles.labelVariant[variant],
             'absolute text-[10px] font-light leading-none text-inherit'
           )}
         >
           {label}
         </span>
         {icon && icon}
-        <input
+        <textarea
           className="bg-transparent text-inherit outline-none"
           {...props}
         />
@@ -158,6 +158,6 @@ const InputFields = React.forwardRef<HTMLDivElement, IInputProps>(
   }
 )
 
-InputFields.displayName = 'InputFields'
+Textarea.displayName = 'Textarea'
 
-export default InputFields
+export default Textarea

@@ -3,7 +3,7 @@ import { Spinner } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Spinner',
+  title: 'Decoupled Components/Spinner',
   component: Spinner,
   parameters: {
     layout: 'centered'

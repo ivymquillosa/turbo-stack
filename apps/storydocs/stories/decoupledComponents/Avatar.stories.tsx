@@ -3,7 +3,7 @@ import { Avatar } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Avatar',
+  title: 'Decoupled Components/Avatar',
   component: Avatar,
   parameters: {
     layout: 'centered'

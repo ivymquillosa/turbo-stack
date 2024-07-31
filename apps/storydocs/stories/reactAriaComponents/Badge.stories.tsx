@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Badge } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Badge',
+  title: 'React Aria Components/Badge',
   component: Badge,
   parameters: {
     layout: 'centered'

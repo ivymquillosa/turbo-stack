@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Popover, Dialog, Button } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Popover',
+  title: 'React Aria Components/Popover',
   component: Popover.Content,
   parameters: {
     layout: 'centered'

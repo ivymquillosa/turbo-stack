@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Tooltip, Button } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Tooltip',
+  title: 'React Aria Components/Tooltip',
   component: Tooltip.Trigger,
   parameters: {
     layout: 'centered'

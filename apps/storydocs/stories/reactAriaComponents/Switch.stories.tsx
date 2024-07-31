@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Switch } from '@stack/aria-components'
 
 const meta = {
-  title: 'React Aria/Switch',
+  title: 'React Aria Components/Switch',
   component: Switch,
   parameters: {
     layout: 'centered'

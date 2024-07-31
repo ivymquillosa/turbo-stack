@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { Button } from '@stack/radix-components'
 
 const meta: Meta<typeof Button> = {
-  title: 'Radix/Button',
+  title: 'Radix Components/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {

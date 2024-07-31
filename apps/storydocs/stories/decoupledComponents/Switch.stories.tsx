@@ -3,7 +3,7 @@ import { Switch } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Switch',
+  title: 'Decoupled Components/Switch',
   component: Switch,
   parameters: {
     layout: 'centered'

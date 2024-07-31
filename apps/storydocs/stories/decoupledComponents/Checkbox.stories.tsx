@@ -3,7 +3,7 @@ import { Checkbox } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled/Checkbox',
+  title: 'Decoupled Components/Checkbox',
   component: Checkbox,
   parameters: {
     layout: 'centered'
