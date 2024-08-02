@@ -74,6 +74,6 @@ export const Default: Story = {
     </div>
   ),
   args: {
-    placement: 'top'
+    placement: 'right'
   }
 }

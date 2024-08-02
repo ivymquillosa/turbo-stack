@@ -9,17 +9,17 @@ const config: Omit<Config, 'content'> = {
       colors: {
         primary: {
           // depends on the primary color of your project
-          50:'#FBECE9',
-          100:'#F8D9D3',
-          200:'#F1B8AC',
-          300:'#E99281',
-          400:'#E26D55',
-          500:'#DB492C',
-          600:'#B3371E',
-          700:'#872A17',
-          800:'#5C1C10',
-          900:'#2C0D07',
-          950:'#160704'
+          50: '#FBECE9',
+          100: '#F8D9D3',
+          200: '#F1B8AC',
+          300: '#E99281',
+          400: '#E26D55',
+          500: '#DB492C',
+          600: '#B3371E',
+          700: '#872A17',
+          800: '#5C1C10',
+          900: '#2C0D07',
+          950: '#160704'
         },
         // color for vite-book (pink-primary)
         // primary: {

@@ -1,9 +1,6 @@
 import { ComponentPropsWithoutRef, ElementRef, forwardRef } from 'react'
 import { Modal, ModalOverlay } from 'react-aria-components'
 
-// const Overlay = ModalOverlay
-// const Content = Modal
-
 const Overlay = forwardRef<
   ElementRef<typeof ModalOverlay>,
   ComponentPropsWithoutRef<typeof ModalOverlay>

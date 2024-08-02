@@ -5,7 +5,7 @@ import { Button as RAButton } from 'react-aria-components'
 import Spinner from './Spinner'
 
 const btnStyles = {
-  base: 'flex gap-2 items-center justify-center',
+  base: 'flex gap-2 items-center justify-center outline-none',
   variant: {
     flat: {
       primary: 'bg-transparent hover:bg-primary-50 text-primary-500',

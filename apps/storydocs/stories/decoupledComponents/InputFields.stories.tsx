@@ -4,7 +4,7 @@ import { CommonMeta } from '../utils/commonMeta'
 import { FiInfo } from 'react-icons/fi'
 
 const meta = {
-  title: 'Decoupled Components/InputFields',
+  title: 'Decoupled Components/Input Fields',
   component: InputFields,
   parameters: {
     layout: 'centered'

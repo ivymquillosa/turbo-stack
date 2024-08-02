@@ -3,7 +3,7 @@ import { ProgressBar } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/ProgressBar',
+  title: 'Decoupled Components/Progress Bar',
   component: ProgressBar,
   parameters: {
     layout: 'centered'

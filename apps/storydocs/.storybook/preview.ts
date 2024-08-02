@@ -10,6 +10,15 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/
       }
+    },
+    options: {
+      storySort: {
+        order: [
+          'Decoupled Components',
+          'React Aria Components',
+          'Radix Components'
+        ]
+      }
     }
   }
 }

@@ -3,7 +3,7 @@ import { Button, FileTrigger } from '@stack/aria-components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 const meta = {
-  title: 'React Aria Components/FileTrigger',
+  title: 'React Aria Components/File Trigger',
   component: FileTrigger,
   parameters: {
     layout: 'centered'
@@ -28,7 +28,9 @@ const FileTriggerExample = (args: Partial<typeof FileTrigger>) => {
           setFile(filenames)
         }}
       >
-        <Button variant='solid' size='base'>Select a file</Button>
+        <Button variant="solid" size="base">
+          Select a file
+        </Button>
       </FileTrigger>
       {file && file}
     </>
