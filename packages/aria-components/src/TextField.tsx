@@ -108,7 +108,7 @@ const textfieldStyles = {
     }
   },
   labelVariant: {
-    flat: '-top-1 left-0 bg-white',
+    flat: '-top-1 left-0 bg-white pr-1',
     solid: 'top-1 left-2',
     outlined: '-top-2 left-1 bg-white px-1',
     soft: 'top-1 left-2'
@@ -145,9 +145,9 @@ const TextField = forwardRef<
     <RATextField
       ref={ref}
       className={cm(
-        'relative data-[disabled]:border-default-200 data-[invalid]:border-danger-500 data-[disabled]:text-default-200 data-[invalid]:text-danger-500',
         textfieldStyles.variant[variant][color],
-        textfieldVariants({ radius, className })
+        textfieldVariants({ radius, className }),
+        'relative data-[disabled]:bg-default-50 data-[disabled]:border-default-200 data-[invalid]:border-danger-500 data-[disabled]:text-default-200 data-[invalid]:text-danger-500',
       )}
       {...rest}
     >

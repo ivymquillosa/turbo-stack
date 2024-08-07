@@ -27,7 +27,7 @@ export const Default: Story = {
     isDisabled: false,
     onChange: e => console.log(e),
     // value: 'test disabled',
-    errorMessage: 'Please fill out this field.',
+    errorMessage: 'Required: Please fill out this field.',
     description: '',
     label: 'First Name',
     className: 'test TextField'

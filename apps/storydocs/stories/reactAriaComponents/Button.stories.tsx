@@ -22,7 +22,8 @@ export const Default: Story = {
     color: 'primary',
     radius: 'round',
     block: false,
-    loading: true,
+    isDisabled: false,
+    loading: false,
     onPress: () => {
       alert('hi button')
     }
