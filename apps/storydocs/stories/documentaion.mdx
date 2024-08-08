@@ -1,3 +1,6 @@
+import { FiGithub, FiLinkedin } from "react-icons/fi"
+import DownloadResume from './download-resume'
+
 <div style={{borderBottom:'solid 1px #db492c', display:'flex', padding:'10px', marginBottom: '20px'}}>
     <img 
         height={150}
@@ -7,7 +10,32 @@
     />
     <div style={{padding:'20px'}}>
         <h1 style={{ margin: 0 }}>Ivy Marie R. Quillosa</h1>
-        <h4 style={{margin: 0}}>Software Engineer | Front-end Developer</h4>
+        <h4 style={{margin: 0, padding: '2px 0', borderBottom: 'solid 1px #dce3e9'}}>Software Engineer | Front-end Developer</h4>
+        <div style={{ display: 'flex', padding: '4px 0', gap: 8, color:'#2E3438', alignItems: 'center'}}>
+          <a
+           style={{ display: 'flex', height: '10px', gap: 4, color:'#2E3438', alignItems: 'center'}}
+            href="https://github.com/ivymquillosa"
+            target="_blank"
+          >
+            <span>
+              <FiGithub className="h-3 w-3" />
+            </span>
+            <span style={{fontSize:'12px'}}>Github</span>
+          </a>
+         <h5 style={{margin:0, lineHeight: '10px', color: '#dce3e9'}}>|</h5>
+          <a
+            style={{ display: 'flex', height: '10px', gap: 4, color:'#2E3438', alignItems: 'center'}}
+            href="https://www.linkedin.com/in/ivy-marie-quillosa-a678bb195/"
+            target="_blank"
+          >
+            <span>
+              <FiLinkedin className="h-3 w-3" />
+            </span>
+            <span style={{fontSize:'12px'}}>LinkedIn</span>
+          </a>
+          <h5 style={{margin:0, lineHeight: '10px', color: '#dce3e9'}}>|</h5>
+          <DownloadResume/>
+        </div>
     </div>
 </div>
 
@@ -101,3 +129,8 @@ Example for adding/removing/upgrading an external package to our `@stack/handcra
 To make the core library code work across all browsers, we need to compile the raw TypeScript and React code to plain JavaScript. We can accomplish this with `tsup`, which uses `esbuild` to greatly improve performance.
 
 Running `pnpm build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
+
+## 
+
+<h5 style={{ marginTop: '40px'}}> Note: This project is still under development, but you can check the complete source code [here](https://github.com/ivymquillosa/turbo-stack/tree/development).</h5>import { FiGithub } from "react-icons/fi"
+

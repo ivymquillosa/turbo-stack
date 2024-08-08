@@ -51,24 +51,15 @@ This example sets up your `.gitignore` to exclude all generated files, other fol
 ## Usage
 After cloning, run `pnpm i` or `pnpm install` on your terminal.
 
-<h4 style={{margin:'15px 0px 3px', fontWeight: 700}}>Develop</h4>
+#### Develop
 To develop all apps and packages, run the following command `pnpm dev`. For filtering a package, run `pnpm dev --filter=package-name`
 
-<h4 style={{margin:'15px 0px 3px', fontWeight: 700}}>Build</h4>
+#### Build
 To build all apps and packages, run the following command `pnpm build`. For filtering a package, run `pnpm build --filter=package-name`
 
-<h4 style={{margin:'15px 0px 3px', fontWeight: 700}}>Storybook</h4>
+#### Storybook
 For running storybook in development mode, run `pnpm storybook`. For running the build preview stories, run `pnpm preview-storybook`.
 
-{/* Publish
-To publish a package(s), run the following commands:
-
-pnpm lint to check the whole source code for programmatic and stylistic errors.
-pnpm format to format the whole source code to have a standard/uniform code format.
-pnpm changeset to select which package(s) you like to publish.
-pnpm version-packages to actually bump the package version and write your CHANGELOG.
-pnpm release to build and publish to our private registry.
-Then push all committed commits by the changeset cli. Then checkout to main branch and merge the publish branch so that the changeset clis next publish process will compare correctly it's new package versions, and release a package that has an actual update. */}
 
 ## Adding/removing/upgrading packages
 You can add, remove and upgrade packages from within the project's root folder using PNpm's built-in commands.

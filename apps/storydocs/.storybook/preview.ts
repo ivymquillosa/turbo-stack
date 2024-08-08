@@ -14,11 +14,13 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
+          'Documentaion',
           'Handcrafted Components',
           'React Aria Components',
           'Radix Components'
         ]
-      }
+      },
+      viewMode: 'docs',
     }
   }
 }
