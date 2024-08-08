@@ -1,4 +1,4 @@
-# Turborepo Design System Starter
+# Get started with Turbostack
 
 This guide explains how to use a React design system starter powered by:
 
