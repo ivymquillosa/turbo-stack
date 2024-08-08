@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Radio } from '@stack/decoupled-components'
+import { Avatar } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Radio',
-  component: Radio,
+  title: 'Handcrafted Components/Avatar',
+  component: Avatar,
   parameters: {
     layout: 'centered'
   },
@@ -13,15 +13,17 @@ const meta = {
     color: CommonMeta?.argsType?.color,
     size: CommonMeta?.argsType?.size
   }
-} satisfies Meta<typeof Radio>
+} satisfies Meta<typeof Avatar>
 
 export default meta
 type Story = StoryObj<typeof meta>
+
 export const Default: Story = {
   args: {
-    label: 'Radio',
+    name: 'Handcrafted Avatar',
+    src: 'https://avatars.githubusercontent.com/u/72949747?v=4',
     color: 'primary',
     size: 'base',
-    className: 'test-Radio'
+    className: 'test'
   }
 }

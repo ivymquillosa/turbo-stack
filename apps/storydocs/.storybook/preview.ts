@@ -14,7 +14,7 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
-          'Decoupled Components',
+          'Handcrafted Components',
           'React Aria Components',
           'Radix Components'
         ]

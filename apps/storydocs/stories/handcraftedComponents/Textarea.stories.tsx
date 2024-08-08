@@ -1,17 +1,17 @@
-import { InputFields } from '@stack/decoupled-components'
 import type { Meta, StoryObj } from '@storybook/react'
+import { Textarea } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 import { FiInfo } from 'react-icons/fi'
 
 const meta = {
-  title: 'Decoupled Components/Input Fields',
-  component: InputFields,
+  title: 'Handcrafted Components/Textarea',
+  component: Textarea,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: { ...CommonMeta.argsType }
-} satisfies Meta<typeof InputFields>
+} satisfies Meta<typeof Textarea>
 
 export default meta
 type Story = StoryObj<typeof meta>

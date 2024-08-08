@@ -1,25 +1,31 @@
+import { Button } from '@stack/handcrafted-components'
 import type { Meta, StoryObj } from '@storybook/react'
-import { Badge } from '@stack/decoupled-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Badge',
-  component: Badge,
+  title: 'Handcrafted Components/Button',
+  component: Button,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: { ...CommonMeta.argsType }
-} satisfies Meta<typeof Badge>
+} satisfies Meta<typeof Button>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    label: 'Badge',
+    children: 'Button',
+    variant: 'solid',
     color: 'primary',
-    size: 'base',
-    className: 'test'
+    radius: 'round',
+    size: 'xl',
+    block: false,
+    loading: true,
+    onClick: () => {
+      alert('hi button')
+    }
   }
 }

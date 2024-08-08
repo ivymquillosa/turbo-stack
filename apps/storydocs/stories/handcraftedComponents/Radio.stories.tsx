@@ -1,24 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Checkbox } from '@stack/decoupled-components'
+import { Radio } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Checkbox',
-  component: Checkbox,
+  title: 'Handcrafted Components/Radio',
+  component: Radio,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: { ...CommonMeta.argsType }
-} satisfies Meta<typeof Checkbox>
+  argTypes: {
+    color: CommonMeta?.argsType?.color,
+    size: CommonMeta?.argsType?.size
+  }
+} satisfies Meta<typeof Radio>
 
 export default meta
 type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
-    label: 'Checkbox',
+    label: 'Radio',
     color: 'primary',
     size: 'base',
-    className: 'test-checkbox'
+    className: 'test-Radio'
   }
 }

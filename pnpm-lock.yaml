@@ -29,9 +29,9 @@ importers:
       '@stack/aria-components':
         specifier: workspace:*
         version: link:../../packages/aria-components
-      '@stack/decoupled-components':
+      '@stack/handcrafted-components':
         specifier: workspace:*
-        version: link:../../packages/decoupled-components
+        version: link:../../packages/handcrafted-components
       '@stack/radix-components':
         specifier: workspace:*
         version: link:../../packages/radix-components
@@ -204,7 +204,7 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/decoupled-components:
+  packages/handcrafted-components:
     dependencies:
       class-variance-authority:
         specifier: ^0.7.0

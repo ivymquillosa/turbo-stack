@@ -1,28 +1,25 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Switch } from '@stack/decoupled-components'
+import { Badge } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Switch',
-  component: Switch,
+  title: 'Handcrafted Components/Badge',
+  component: Badge,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
-  argTypes: {
-    color: CommonMeta?.argsType?.color,
-    size: CommonMeta?.argsType?.size
-  }
-} satisfies Meta<typeof Switch>
+  argTypes: { ...CommonMeta.argsType }
+} satisfies Meta<typeof Badge>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
+    label: 'Badge',
     color: 'primary',
     size: 'base',
-    children: 'Hello Switch',
     className: 'test'
   }
 }

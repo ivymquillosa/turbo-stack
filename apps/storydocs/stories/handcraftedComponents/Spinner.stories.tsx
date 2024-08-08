@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Spinner } from '@stack/decoupled-components'
+import { Spinner } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Spinner',
+  title: 'Handcrafted Components/Spinner',
   component: Spinner,
   parameters: {
     layout: 'centered'

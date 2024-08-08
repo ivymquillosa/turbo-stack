@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { ProgressBar } from '@stack/decoupled-components'
+import { ProgressBar } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Progress Bar',
+  title: 'Handcrafted Components/Progress Bar',
   component: ProgressBar,
   parameters: {
     layout: 'centered'

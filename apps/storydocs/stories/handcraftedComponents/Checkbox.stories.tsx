@@ -1,31 +1,24 @@
-import { Button } from '@stack/decoupled-components'
 import type { Meta, StoryObj } from '@storybook/react'
+import { Checkbox } from '@stack/handcrafted-components'
 import { CommonMeta } from '../utils/commonMeta'
 
 const meta = {
-  title: 'Decoupled Components/Button',
-  component: Button,
+  title: 'Handcrafted Components/Checkbox',
+  component: Checkbox,
   parameters: {
     layout: 'centered'
   },
   tags: ['autodocs'],
   argTypes: { ...CommonMeta.argsType }
-} satisfies Meta<typeof Button>
+} satisfies Meta<typeof Checkbox>
 
 export default meta
 type Story = StoryObj<typeof meta>
-
 export const Default: Story = {
   args: {
-    children: 'Button',
-    variant: 'solid',
+    label: 'Checkbox',
     color: 'primary',
-    radius: 'round',
-    size: 'xl',
-    block: false,
-    loading: true,
-    onClick: () => {
-      alert('hi button')
-    }
+    size: 'base',
+    className: 'test-checkbox'
   }
 }
