@@ -157,20 +157,6 @@ const config: Omit<Config, 'content'> = {
           950: '#000C19'
         }
       }
-      // fontFamily: {
-      //   primary: [
-      //     'var(--font-family-primary)',
-      //     ...defaultTheme.fontFamily.sans
-      //   ],
-      //   secondary: [
-      //     'var(--font-family-secondary)',
-      //     ...defaultTheme.fontFamily.serif
-      //   ],
-      //   tertiary: [
-      //     'var(--font-family-tertiary)',
-      //     ...defaultTheme.fontFamily.mono
-      //   ]
-      // }
     }
   },
   plugins: [ReactAriaTailwind, AnimateTailwind]
