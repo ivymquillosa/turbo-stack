@@ -1,4 +1,3 @@
-import React from 'react'
 import { FiDownload } from 'react-icons/fi'
 
 function DownloadResume(): JSX.Element {
@@ -6,7 +5,7 @@ function DownloadResume(): JSX.Element {
     const pdfUrl = '/ivyMarieQuillosa.pdf' // Path to your PDF file
     const link = document.createElement('a')
     link.href = pdfUrl
-    link.download = `IvyMarieQuillosa-${Date.now()}.pdf` // Name of the downloaded file
+    link.download = `IvyMarieQuillosaResume.pdf` // Name of the downloaded file
     link.click()
   }
 
