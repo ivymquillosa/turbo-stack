@@ -2,7 +2,7 @@ import { FiDownload } from 'react-icons/fi'
 
 function DownloadResume(): JSX.Element {
   const handleDownload = (): void => {
-    const pdfUrl = '/ivymariequillosa.pdf' // Path to your PDF file
+    const pdfUrl = '/ivyMarieQuillosa.pdf' // Path to your PDF file
     const link = document.createElement('a')
     link.href = pdfUrl
     link.download = `IvyMarieQuillosa2024.pdf` // Name of the downloaded file
