@@ -9,9 +9,13 @@ export * from './Card'
 export * from './Carousel'
 export * from './Collapsible'
 export { default as Checkbox } from './Checkbox'
+export { default as DatePicker } from './DatePicker'
+export * from './Popover'
 export { default as RadioGroup } from './RadioGroup'
 export { default as Select } from './Select'
 export * from './Switch'
+export * from './Tabs'
+
 
 
 

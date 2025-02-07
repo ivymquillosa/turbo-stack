@@ -1,0 +1,36 @@
+.acontainer {
+    display: flex;
+    width: 40rem;
+    padding: 2.5rem;
+  }
+  .animated_container {
+    animation: scroll 90s linear infinite;
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .stack_plates {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    row-gap: 0;
+    width: 100%;
+    min-width: 33.333333%;
+  }
+  .plates_wrapper {
+    margin: 1.5rem -0.4rem;
+    width: 12rem;
+    height: 5rem;
+  }
+  .plates {
+    transform: skew(6deg, 18deg);
+    rotate: -54deg;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: -4px 4px 8px 0px currentColor;
+  
+  }
+  .plates:hover {
+    transform:  skew(6deg, 18deg) translateY(-10px);
+    box-shadow: -8px 8px 14px 2px currentColor;
+  }
