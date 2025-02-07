@@ -92,9 +92,9 @@ const meta = {
         source: '/plates/parzival.svg',
       },
       {
-        name: 'parzival',
+        name: 'psywgn',
         color: 'rgba(187, 10, 20, 0.4)',
-        source: '/plates/parzival.svg',
+        source: '/plates/psywgn.svg',
       },
       {
         name: 'socool',
